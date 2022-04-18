@@ -5,50 +5,50 @@
 
 using namespace std;
 
-class Complex  //управляющая конструкция (class)
+class Complex  //СѓРїСЂР°РІР»СЏСЋС‰Р°СЏ РєРѕРЅСЃС‚СЂСѓРєС†РёСЏ (class)
 {
-	double Re; //вещественная часть комплексного числа
-	double Im; //мнимая часть комплексного числа
+	double Re; //РІРµС‰РµСЃС‚РІРµРЅРЅР°СЏ С‡Р°СЃС‚СЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+	double Im; //РјРЅРёРјР°СЏ С‡Р°СЃС‚СЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 
 public:
 
-	Complex(double aRe = 0, double aIm = 0); //контруктор создания объекта
-	Complex(const Complex&);             //контруктор копирования
-	~Complex();                          //деструктор
+	Complex(double aRe = 0, double aIm = 0); //РєРѕРЅС‚СЂСѓРєС‚РѕСЂ СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚Р°
+	Complex(const Complex&);             //РєРѕРЅС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+	~Complex();                          //РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 
 	void Set(double aRe, double aIm = 0);
 	operator double();
 	double abs();
 
-	//переопределение операторов сдвига в IO поток
+	//РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚РѕСЂРѕРІ СЃРґРІРёРіР° РІ IO РїРѕС‚РѕРє
 	friend istream& operator>> (istream&, Complex&);
 	friend ostream& operator<< (ostream&, Complex&);
 
-	//переопределение оперататоров сложения
+	//РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚Р°С‚РѕСЂРѕРІ СЃР»РѕР¶РµРЅРёСЏ
 	Complex operator+ (const Complex&);
 	Complex operator+ (const double&);
 	friend Complex operator+ (const double&, const Complex&);
 
-	//переопределение оперататоров вычитания
+	//РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚Р°С‚РѕСЂРѕРІ РІС‹С‡РёС‚Р°РЅРёСЏ
 	Complex operator- (const Complex&);
 	Complex operator- (const double&);
 	friend Complex operator- (const double&, const Complex&);
 
-	//переопределение оперататоров умножения
+	//РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚Р°С‚РѕСЂРѕРІ СѓРјРЅРѕР¶РµРЅРёСЏ
 	Complex operator* (const Complex&);
 	Complex operator* (const double&);
 	friend Complex operator* (const double&, const Complex&);
 
-	//переопределение оперататоров деления
+	//РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚Р°С‚РѕСЂРѕРІ РґРµР»РµРЅРёСЏ
 	Complex operator/ (const double&);
 
-	//переопределение операторов присваивания комплексных чисел
+	//РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚РѕСЂРѕРІ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ РєРѕРјРїР»РµРєСЃРЅС‹С… С‡РёСЃРµР»
 	Complex& operator += (const Complex&);
 	Complex& operator -= (const Complex&);
 	Complex& operator *= (const Complex&);
 	Complex& operator =  (const Complex&);
 
-	//переопределение операторов присваивания вещественных чисел
+	//РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїРµСЂР°С‚РѕСЂРѕРІ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ РІРµС‰РµСЃС‚РІРµРЅРЅС‹С… С‡РёСЃРµР»
 	Complex& operator += (const double&);
 	Complex& operator -= (const double&);
 	Complex& operator *= (const double&);
