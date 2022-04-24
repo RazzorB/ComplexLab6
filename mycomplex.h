@@ -1,3 +1,8 @@
+/*!
+	@file
+	@brief Заголовочный файл класса Complex
+*/
+
 #ifndef _MY_COMPLEX_H_
 #define _MY_COMPLEX_H_
 
@@ -5,11 +10,19 @@
 
 using namespace std;
 
-class Complex  //управляющая конструкция (class)
+/*!
+	@brief Класс комплексного числа
+*/
+class Complex
 {
-	double Re; //вещественная часть комплексного числа
-	double Im; //мнимая часть комплексного числа
-
+	/*!
+		@brief Действительная составляющая
+	*/
+	double Re;
+	/*!
+		@brief Мнимая составляющая
+	*/
+	double Im;
 public:
 
 	Complex(double aRe = 0, double aIm = 0); //контруктор создания объекта
