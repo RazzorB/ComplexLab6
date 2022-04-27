@@ -1,6 +1,6 @@
-/*!
-	@file
-	@brief Файл с описанием методов класса комплексного числа
+﻿/*!
+    @file
+    @brief Файл с описанием методов класса комплексного числа
 */
 
 #include <iostream>
@@ -11,9 +11,9 @@ using namespace std;
 
 //-------------------------------------------
 /*!
-	@brief Консруктор класса Complex
-	@param aRe действительная составляющая
-	@param aIm действительная составляющая
+    @brief Консруктор класса Complex
+    @param aRe действительная составляющая
+    @param aIm действительная составляющая
 */
 Complex::Complex(double aRe, double aIm)
 {
@@ -23,9 +23,9 @@ Complex::Complex(double aRe, double aIm)
 
 //-------------------------------------------
 /*!
-	@brief Консруктор копирования класса Complex
-	@param aRval Комплексное число
-*/
+    @brief Консруктор копирования класса Complex
+    @param aRval Комплексное число
+*/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
 Complex::Complex(const Complex& aRval)
 {
 	Re = aRval.Re;
@@ -34,19 +34,20 @@ Complex::Complex(const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Деконсруктор класса Complex
+    @brief Деконсруктор класса Complex
 */
 Complex::~Complex()
 {
+	int ngfn;
 	Re = 0.0;
 	Im = 0.0;
 }
 
 //-------------------------------------------
 /*!
-	@brief Консруктор класса Complex
-	@param aRe действительная составляющая
-	@param aIm действительная составляющая
+    @brief Консруктор класса Complex
+    @param aRe действительная составляющая
+    @param aIm действительная составляющая
 */
 void Complex::Set(double aRe, double aIm)
 {
@@ -58,8 +59,8 @@ void Complex::Set(double aRe, double aIm)
 
 //-------------------------------------------
 /*!
-	@brief Переопределенный оператор()
-	@return Модуль комплексного число
+    @brief Переопределенный оператор()
+    @return Модуль комплексного число
 */
 Complex::operator double()
 {
@@ -68,8 +69,8 @@ Complex::operator double()
 
 //-------------------------------------------
 /*!
-	@brief Модуль комплексного число
-	@return Модуль комплексного число
+    @brief Модуль комплексного число
+    @return Модуль комплексного число
 */
 double Complex::abs()
 {
@@ -78,9 +79,9 @@ double Complex::abs()
 
 //-------------------------------------------
 /*!
-	@brief Оператор сложения
-	@param aRval Комплексное число
-	@return Сумму комплексных чисел
+    @brief Оператор сложения
+    @param aRval Комплексное число
+    @return Сумму комплексных чисел
 */
 Complex Complex::operator+ (const Complex& aRval)
 {
@@ -94,9 +95,9 @@ Complex Complex::operator+ (const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор вычитания
-	@param aRval Комплексное число
-	@return Разность комплексных чисел
+    @brief Оператор вычитания
+    @param aRval Комплексное число
+    @return Разность комплексных чисел
 */
 Complex Complex::operator- (const Complex& aRval)
 {
@@ -110,9 +111,9 @@ Complex Complex::operator- (const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор сложения
-	@param aRval Вещественное число
-	@return Сумму комплексных чисел
+    @brief Оператор сложения
+    @param aRval Вещественное число
+    @return Сумму комплексных чисел
 */
 Complex Complex::operator+ (const double& aRval)
 {
@@ -126,9 +127,9 @@ Complex Complex::operator+ (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор вычитания
-	@param aRval Вещественное число
-	@return Разность комплексных чисел
+    @brief Оператор вычитания
+    @param aRval Вещественное число
+    @return Разность комплексных чисел
 */
 Complex Complex::operator- (const  double& aRval)
 {
@@ -141,9 +142,9 @@ Complex Complex::operator- (const  double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор умножения
-	@param aRval Комплексное число
-	@return Произведение комплексных чисел
+    @brief Оператор умножения
+    @param aRval Комплексное число
+    @return Произведение комплексных чисел
 */
 Complex Complex::operator* (const Complex& aRval)
 {
@@ -157,9 +158,9 @@ Complex Complex::operator* (const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор умножения
-	@param aRval Вещественное число
-	@return Произведение комплексных чисел
+    @brief Оператор умножения
+    @param aRval Вещественное число
+    @return Произведение комплексных чисел
 */
 Complex Complex::operator* (const double& aRval)
 {
@@ -173,9 +174,9 @@ Complex Complex::operator* (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор деления
-	@param aRval Вещественное число
-	@return Частное комплексных чисел
+    @brief Оператор деления
+    @param aRval Вещественное число
+    @return Частное комплексных чисел
 */
 Complex Complex::operator/ (const double& aRval)
 {
@@ -189,9 +190,9 @@ Complex Complex::operator/ (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор сложения с присваиванием
-	@param aRval Комплексное число
-	@return Сумму комплексных чисел
+    @brief Оператор сложения с присваиванием
+    @param aRval Комплексное число
+    @return Сумму комплексных чисел
 */
 Complex& Complex::operator+= (const Complex& aRval)
 {
@@ -203,9 +204,9 @@ Complex& Complex::operator+= (const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор вычитания с присваиванием
-	@param aRval Комплексное число
-	@return Разность комплексных чисел
+    @brief Оператор вычитания с присваиванием
+    @param aRval Комплексное число
+    @return Разность комплексных чисел
 */
 Complex& Complex::operator-= (const Complex& aRval)
 {
@@ -217,9 +218,9 @@ Complex& Complex::operator-= (const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор умножения с присваиванием
-	@param aRval Комплексное число
-	@return Произведение комплексных чисел
+    @brief Оператор умножения с присваиванием
+    @param aRval Комплексное число
+    @return Произведение комплексных чисел
 */
 Complex& Complex::operator*=(const Complex& aRval)
 {
@@ -233,9 +234,9 @@ Complex& Complex::operator*=(const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор сложения с присваиванием
-	@param aRval Вещественное число
-	@return Сумму комплексных чисел
+    @brief Оператор сложения с присваиванием
+    @param aRval Вещественное число
+    @return Сумму комплексных чисел
 */
 Complex& Complex::operator+= (const double& aRval)
 {
@@ -246,9 +247,9 @@ Complex& Complex::operator+= (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор вычитания с присваиванием
-	@param aRval Вещественное число
-	@return Разность комплексных чисел
+    @brief Оператор вычитания с присваиванием
+    @param aRval Вещественное число
+    @return Разность комплексных чисел
 */
 Complex& Complex::operator-= (const double& aRval)
 {
@@ -259,9 +260,9 @@ Complex& Complex::operator-= (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор умножения с присваиванием
-	@param aRval Вещественное число
-	@return Произведение комплексных чисел
+    @brief Оператор умножения с присваиванием
+    @param aRval Вещественное число
+    @return Произведение комплексных чисел
 */
 Complex& Complex::operator*= (const double& aRval)
 {
@@ -273,9 +274,9 @@ Complex& Complex::operator*= (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор деления с присваиванием
-	@param aRval Вещественное число
-	@return Частное комплексных чисел
+    @brief Оператор деления с присваиванием
+    @param aRval Вещественное число
+    @return Частное комплексных чисел
 */
 Complex& Complex::operator/= (const double& aRval)
 {
@@ -287,9 +288,9 @@ Complex& Complex::operator/= (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор присваивания
-	@param aRval Комплексное число
-	@return Ссылка на объект
+    @brief Оператор присваивания
+    @param aRval Комплексное число
+    @return Ссылка на объект
 */
 Complex& Complex::operator= (const Complex& aRval)
 {
@@ -301,9 +302,9 @@ Complex& Complex::operator= (const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор присваивания
-	@param aRval Вещественное число
-	@return Ссылка на объект
+    @brief Оператор присваивания
+    @param aRval Вещественное число
+    @return Ссылка на объект
 */
 Complex& Complex::operator= (const double& aRval)
 {
@@ -315,10 +316,10 @@ Complex& Complex::operator= (const double& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор сдвига вправо
-	@param stream Поток ввода
-	@param aRval Комплексное число число
-	@return IO поток
+    @brief Оператор сдвига вправо
+    @param stream Поток ввода
+    @param aRval Комплексное число число
+    @return IO поток
 */
 istream& operator>> (istream& stream, Complex& aRval)
 {
@@ -331,10 +332,10 @@ istream& operator>> (istream& stream, Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор сдвига вправо
-	@param stream Поток вывода
-	@param aRval Комплексное число число
-	@return IO поток
+    @brief Оператор сдвига вправо
+    @param stream Поток вывода
+    @param aRval Комплексное число число
+    @return IO поток
 */
 ostream& operator<< (ostream& stream, Complex& aRval)
 {
@@ -350,10 +351,10 @@ ostream& operator<< (ostream& stream, Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор сложения
-	@param aLval Вещественное число
-	@param aRval Комплексное число
-	@return Сумма чисел
+    @brief Оператор сложения
+    @param aLval Вещественное число
+    @param aRval Комплексное число
+    @return Сумма чисел
 */
 Complex operator+ (const double& aLval, const Complex& aRval)
 {
@@ -367,10 +368,10 @@ Complex operator+ (const double& aLval, const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор вычитания
-	@param aLval Вещественное число
-	@param aRval Комплексное число
-	@return Разность чисел
+    @brief Оператор вычитания
+    @param aLval Вещественное число
+    @param aRval Комплексное число
+    @return Разность чисел
 */
 Complex operator-(const double& aLval, const Complex& aRval)
 {
@@ -383,10 +384,10 @@ Complex operator-(const double& aLval, const Complex& aRval)
 
 //-------------------------------------------
 /*!
-	@brief Оператор умножения
-	@param aLval Вещественное число
-	@param aRval Комплексное число
-	@return Произведение чисел
+    @brief Оператор умножения
+    @param aLval Вещественное число
+    @param aRval Комплексное число
+    @return Произведение чисел
 */
 Complex operator* (const double& aLval, const Complex& aRval)
 {
